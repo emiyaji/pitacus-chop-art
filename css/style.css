@@ -1252,42 +1252,67 @@ body {
    
    
    .photo-container {
+  position: relative;
+   }
+
+  .first-photo {
     position: relative;
-    height: 900px;
-    width: 1000px;
-    /* Adjust as needed */
-    overflow: hidden;
-   }
-   
-   
-   .photo {
-    position: absolute;
-    /* height: 100%;
-    width: 100%; */
-    opacity: 0;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-   }
-   
-   
-   .first-photo {
-    left: 0;
-    transform: translateX(-100%);
-    height: 800px;
-    width: auto;
-   }
-   
+    left: -20%;
+
+  }
    
    .second-photo {
-    left: calc(100% - 80px);
-    /* Adjust overlap as needed */
-    transform: translateX(100%);
-    height: 350px;
-    width: auto;
+    position: absolute; 
+    top: 0;
+    right: -10%;
+    max-width: 60%;
    }
    
-   
-   .photo.visible {
-    opacity: 1;
-    transform: translateX(0);
-   }
-   
+   /* Make sure the footer has a relative position */
+.site-footer {
+  position: relative;
+  width: 100%;
+}
+
+/* Style the background image for the footer */
+.site-footer section {
+  position: relative;
+}
+
+.site-footer img {
+  width: 100%;  /* Ensures the image spans across the full width of the footer */
+  height: auto; /* Keep aspect ratio intact */
+}
+/* -------------NEW FOOTER CODE---------------------------- */
+
+
+/* Style the navigation inside the footer */
+.site-footer .site-nav {
+  position: absolute;   /* Positioning the nav buttons over the footer */
+  bottom: 20px;         /* Adjust distance from the bottom of the footer */
+  left: 50%;            /* Center the navigation horizontally */ 
+  z-index: 10;          /* Ensures the buttons are above the image */
+  display: flex;
+  justify-content: center;
+}
+
+/* Style individual navigation links */
+.site-footer .site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between the links */
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer .site-nav a {
+  color: white; /* White color for visibility on a dark background */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.site-footer .site-nav a:hover {
+  color: #f1c40f; /* Change color on hover, example: golden yellow */
+}
