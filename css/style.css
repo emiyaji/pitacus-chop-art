@@ -1257,14 +1257,14 @@ body {
 
   .first-photo {
     position: relative;
-    left: -20%;
+    left: 0%;
 
   }
    
    .second-photo {
     position: absolute; 
     top: 0;
-    right: -10%;
+    right: 15%;
     max-width: 60%;
    }
    
@@ -1282,6 +1282,7 @@ body {
 .site-footer img {
   width: 100%;  /* Ensures the image spans across the full width of the footer */
   height: auto; /* Keep aspect ratio intact */
+  bottom: 0;
 }
 /* -------------NEW FOOTER CODE---------------------------- */
 
