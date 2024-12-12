@@ -1372,3 +1372,47 @@ body {
     width: 50%;
   }
 }
+/* COLLECTION SECTION ------------------------------ */
+.collections .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.photo-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.photo-link {
+  flex-basis: 32%; /* (100% - 2% * 2 gaps) / 3 items */
+}
+
+.photo-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .photo-row {
+    flex-direction: column;
+  }
+  
+  .photo-link {
+    flex-basis: 100%;
+    margin-bottom: 5%;
+  }
+}
+
+.photo-link {
+  flex-basis: 32%;
+  text-align: center; /* This centers the caption */
+}
+
+.photo-link figcaption {
+  margin-top: 2%;
+  font-size: 1.5em;
+  text-align: center; /* Ensures text is centered */
+}
