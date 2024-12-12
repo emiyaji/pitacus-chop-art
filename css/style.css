@@ -692,63 +692,7 @@ body {
     content: "\2715";
    }
    
-   
-   /*  SUBPAGES */
-   
-   
-   article {
-    max-width: 38em;
-    margin: 0 auto 8em auto;
-    /* padding: 1em 0; */
-   }
-   
-   
-   article h1 {
-    text-align: center;
-   }
-   
-   
-   article h1+h2+h4 {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1.25em;
-    font-weight: normal;
-    margin-bottom: 1em;
-   }
-   
-   
-   article .date {
-    text-align: center;
-    font-size: 0.625em;
-    line-height: 0.625em;
-    color: #999;
-    font-weight: normal;
-   }
-   
-   
-   article .date+p {
-    margin-top: 2em;
-   }
-   
-   
-   article p+h2,
-   article p+h3,
-   article p+h4,
-   article p+h5,
-   article p+h6 {
-    margin-top: 1em;
-   }
-   
-   
-   article p:first-of-type:first-letter {
-    font-size: 3em;
-    line-height: 1em;
-    background-color: rgb(123, 135, 127);
-    color: white;
-    padding: .1em .2em;
-    margin: .1em .2em 0 0;
-    float: left;
-   }
+
    
    
    /* Animated Toggle-Nav Menu */
@@ -1283,6 +1227,7 @@ body {
   width: 100%;  /* Ensures the image spans across the full width of the footer */
   height: auto; /* Keep aspect ratio intact */
   bottom: 0;
+
 }
 /* -------------NEW FOOTER CODE---------------------------- */
 
