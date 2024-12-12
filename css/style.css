@@ -1152,27 +1152,75 @@ body {
     .swiper-slide-active img {
       scale: 1.2;
     }
-   }
-   
-   
-   .carousel-section {
+  }
+  
+  .carousel-section {
     position: relative;
     background: transparent;
     padding-bottom: 2em;
-   }
-   
-   
-   .swiper-pagination-progressbar.swiper-pagination-horizontal {
-    bottom: 0;
+  }
+  
+  .swiper-container {
+    padding-bottom: 60px; /* Create space for controls */
+  }
+  
+  /* Change progress bar color */
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #d4a556 !important;
+  }
+  
+  /* Position the progress bar */
+  .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    bottom: 40px; /* Position above the arrows */
     top: auto;
-   }
-   
-   
-   .swiper-button-next,
-   .swiper-button-prev {
-    top: var(--swiper-navigation-top-offset, bottom);
+  }
+  
+  /* Style and position the navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: -20px; /* Position below the progress bar */
     color: #d4a556;
-   }
+  }
+
+  .swiper-button-prev {
+   left: auto;
+   right: 7%; /* Position below the progress bar */
+  }
+
+  .swiper-button-next {
+    right: 2%; /* Keep the right arrow's position */
+  }
+  
+  /* Adjust the controls container */
+  .swiper-controls {
+    position: relative;
+    height: 60px; /* Adjust based on your needs */
+  }
+  
+  /* Ensure navigation buttons are properly positioned */
+  .swiper-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    bottom: 1%; /* Adjust for smaller screens */
+  }
+
+  .swiper-button-prev {
+    right: 12%; /* Adjust spacing for smaller screens */
+  }
+
+  .swiper-button-next {
+    right: 2%;
+  }
+}
    
    
    /* NEW ARIVALS SECTION --------------------------------------------> */
@@ -1211,54 +1259,116 @@ body {
     right: 15%;
     max-width: 60%;
    }
+
+   .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+   }
+   .fade-in.visible {
+    opacity: 1;
+  }
    
    /* Make sure the footer has a relative position */
+/* .site-footer {
+  position: relative;
+  width: 100%;
+} */
+
+/* Style the background image for the footer */
+/* .site-footer section {
+  position: relative;
+} */
+
+/* .site-footer img {
+  width: 100%;  /* Ensures the image spans across the full width of the footer */
+  /* height: auto; Keep aspect ratio intact */
+  /* bottom: 0%; */ 
+
+/* } */
+/* -------------NEW FOOTER CODE---------------------------- */
+
+
+/* Style the navigation inside the footer */
+/* .site-footer .site-nav {
+  position: absolute;   /* Positioning the nav buttons over the footer */
+  /* bottom: 20px;         /* Adjust distance from the bottom of the footer */
+  /* left: 50%;            /* Center the navigation horizontally */ 
+  /* z-index: 10;          /* Ensures the buttons are above the image */
+  /* display: flex;
+  justify-content: center; */
+/* } */ 
+
+/* Style individual navigation links */
+/* .site-footer .site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between the links */
+  /* margin: 0;
+  padding: 0;
+} */ 
+
+/* .site-footer .site-nav a {
+  color: white; /* White color for visibility on a dark background */
+  /* text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+} */
+
+/* .site-footer .site-nav a:hover {
+  color: #f1c40f; /* Change color on hover, example: golden yellow */
+/* } */ 
+
 .site-footer {
   position: relative;
   width: 100%;
 }
 
-/* Style the background image for the footer */
-.site-footer section {
+.footer-content {
   position: relative;
+  width: 100%;
 }
 
-.site-footer img {
-  width: 100%;  /* Ensures the image spans across the full width of the footer */
-  height: auto; /* Keep aspect ratio intact */
-  bottom: 0;
-
-}
-/* -------------NEW FOOTER CODE---------------------------- */
-
-
-/* Style the navigation inside the footer */
-.site-footer .site-nav {
-  position: absolute;   /* Positioning the nav buttons over the footer */
-  bottom: 20px;         /* Adjust distance from the bottom of the footer */
-  left: 50%;            /* Center the navigation horizontally */ 
-  z-index: 10;          /* Ensures the buttons are above the image */
-  display: flex;
-  justify-content: center;
+.footer-background {
+  width: 100%;
+  display: block;
 }
 
-/* Style individual navigation links */
-.site-footer .site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Space between the links */
-  margin: 0;
-  padding: 0;
+.home-button {
+  position: absolute;
+  right: 10%; /* Changed from 140px */
+  top: 60%;
+  transform: translateY(-50%);
 }
 
-.site-footer .site-nav a {
-  color: white; /* White color for visibility on a dark background */
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
+.home-button img {
+  width: 70%; /* Keep this as a percentage */
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
 }
 
-.site-footer .site-nav a:hover {
-  color: #f1c40f; /* Change color on hover, example: golden yellow */
+.home-button:hover img {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .home-button {
+    right: 5%;
+    top: 70%;
+  }
+  
+  .home-button img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-button {
+    right: 3%;
+    top: 80%;
+  }
+  
+  .home-button img {
+    width: 50%;
+  }
 }
