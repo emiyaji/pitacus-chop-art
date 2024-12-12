@@ -556,7 +556,6 @@ body {
     display: flex;
     justify-content: center;
    
-   
    }
    
    
@@ -1123,6 +1122,12 @@ body {
    }
    
    
+      .site-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    /* Add other styles for your nav items here */
+   }
    
    
    
@@ -1225,7 +1230,7 @@ body {
    
    /* NEW ARIVALS SECTION --------------------------------------------> */
    .new-arrivals {
-    padding: 6em 4%;
+    padding: 4em 4%;
     background-color: transparent;
     justify-content: center;
     display: flex;

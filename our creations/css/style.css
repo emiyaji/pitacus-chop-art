@@ -1047,11 +1047,7 @@ body {
    }
    
    
-   article {
-    justify-content: center;
-    text-align: center;
-   }
-   
+  
    
    span {
     color: rgb(180, 220, 186);
@@ -1071,7 +1067,15 @@ body {
    }
    
    
-   .site-header.fixed {
+
+  
+   .site-nav .current-page {
+    font-weight: bold;
+    font-size: 1em; /* Reset to original font size */
+    padding: 1em; /* Match the existing nav item padding */
+  }
+  
+  .site-header.fixed {
     position: fixed;
     width: 100%;
     height: 100px;
@@ -1079,13 +1083,11 @@ body {
     z-index: 100;
     background-color: transparent;
     color: #d4a556;
-   
-   
-    .site-header.fixed+.site-main {
-      padding-top: 2em;
-    }
-   }
-   
+  }
+  
+  .site-header.fixed + .site-main {
+    padding-top: 2em;
+  }
    
    @media (min-height: 600px) {
     #contact {
@@ -1093,8 +1095,8 @@ body {
     }
    }
    
-   
-   
+    
+/* FOOTER---------------------------   */
    
    
    
@@ -1113,6 +1115,60 @@ body {
     /* Center items vertically */
     /* Add padding or any other styles as required */
    }
+   .site-footer {
+    position: relative;
+    width: 100%;
+    /* margin-top: auto; */
+}
+  
+  .footer-content {
+    position: relative;
+    width: 100%;
+  }
+  
+  .footer-background {
+    width: 100%;
+    display: block;
+  }
+  
+  .home-button {
+    position: absolute;
+    right: 10%; /* Changed from 140px */
+    top: 60%;
+    transform: translateY(-50%);
+  }
+  
+  .home-button img {
+    width: 70%; /* Keep this as a percentage */
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  .home-button:hover img {
+    transform: scale(1.1);
+  }
+  @media (max-width: 768px) {
+    .home-button {
+      right: 5%;
+      top: 70%;
+    }
+    
+    .home-button img {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-button {
+      right: 3%;
+      top: 80%;
+    }
+    
+    .home-button img {
+      width: 50%;
+    }
+  }
    
    
    .site-nav ul {
@@ -1144,121 +1200,9 @@ body {
     /* Scales up the icon slightly on hover */
    }
    
-   
-   /* --------------------------------------------- */
-   /* Basic carousel layout */
-   /* SWIPER STYLING */
-   .swiper {
-    .swiper-slide-active img {
-      scale: 1.2;
-    }
-  }
   
-  .carousel-section {
-    position: relative;
-    background: transparent;
-    padding-bottom: 2em;
-  }
   
-  .swiper-container {
-    padding-bottom: 60px; /* Create space for controls */
-  }
   
-  /* Change progress bar color */
-  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: #d4a556 !important;
-  }
-  
-  /* Position the progress bar */
-  .swiper-pagination-progressbar.swiper-pagination-horizontal {
-    bottom: 40px; /* Position above the arrows */
-    top: auto;
-  }
-  
-  /* Style and position the navigation arrows */
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: auto;
-    bottom: -20px; /* Position below the progress bar */
-    color: #d4a556;
-  }
-
-  .swiper-button-prev {
-   left: auto;
-   right: 7%; /* Position below the progress bar */
-  }
-
-  .swiper-button-next {
-    right: 2%; /* Keep the right arrow's position */
-  }
-  
-  /* Adjust the controls container */
-  .swiper-controls {
-    position: relative;
-    height: 60px; /* Adjust based on your needs */
-  }
-  
-  /* Ensure navigation buttons are properly positioned */
-  .swiper-navigation {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  /* Media query for smaller screens */
-@media (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    bottom: 1%; /* Adjust for smaller screens */
-  }
-
-  .swiper-button-prev {
-    right: 12%; /* Adjust spacing for smaller screens */
-  }
-
-  .swiper-button-next {
-    right: 2%;
-  }
-}
-   
-   
-   /* NEW ARIVALS SECTION --------------------------------------------> */
-   .new-arrivals {
-    padding: 6em 4%;
-    background-color: transparent;
-    justify-content: center;
-    display: flex;
-   }
-   
-   
-   
-   
-   /* NEWS SECTION --------------------------------------------> */
-   .news {
-    padding: 6em 4%;
-    background-color: transparent;
-    justify-content: center;
-    display: flex;
-   }
-   
-   
-   .photo-container {
-  position: relative;
-   }
-
-  .first-photo {
-    position: relative;
-    left: 0%;
-
-  }
-   
-   .second-photo {
-    position: absolute; 
-    top: 0;
-    right: 15%;
-    max-width: 60%;
-   }
 
    .fade-in {
     opacity: 0;
@@ -1268,107 +1212,65 @@ body {
     opacity: 1;
   }
    
-   /* Make sure the footer has a relative position */
-/* .site-footer {
-  position: relative;
-  width: 100%;
+  /* .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 } */
 
-/* Style the background image for the footer */
-/* .site-footer section {
-  position: relative;
-} */
+.cards-section {
+  flex: 1 0 auto;
+  /* padding-bottom: 150px; Adjust this value based on your footer's height */
+}
 
-/* .site-footer img {
-  width: 100%;  /* Ensures the image spans across the full width of the footer */
-  /* height: auto; Keep aspect ratio intact */
-  /* bottom: 0%; */ 
-
-/* } */
-/* -------------NEW FOOTER CODE---------------------------- */
-
-
-/* Style the navigation inside the footer */
-/* .site-footer .site-nav {
-  position: absolute;   /* Positioning the nav buttons over the footer */
-  /* bottom: 20px;         /* Adjust distance from the bottom of the footer */
-  /* left: 50%;            /* Center the navigation horizontally */ 
-  /* z-index: 10;          /* Ensures the buttons are above the image */
-  /* display: flex;
-  justify-content: center; */
+/* CARDS ----------------------------------------> */
+/* .cards-section {
+  padding: 20px; /* General padding for the section */
+  /* height: calc(100vh - 80px - 50px); /* Adjust based on your layout */
 /* } */ 
 
-/* Style individual navigation links */
-/* .site-footer .site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Space between the links */
-  /* margin: 0;
-  padding: 0;
-} */ 
-
-/* .site-footer .site-nav a {
-  color: white; /* White color for visibility on a dark background */
-  /* text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
-} */
-
-/* .site-footer .site-nav a:hover {
-  color: #f1c40f; /* Change color on hover, example: golden yellow */
-/* } */ 
-
-.site-footer {
-  position: relative;
-  width: 100%;
+.container {
+  max-width: 1000px; /* Set a max width for your container */
+  margin: 0 auto; /* Center the container */
 }
 
-.footer-content {
-  position: relative;
-  width: 100%;
-}
-
-.footer-background {
-  width: 100%;
-  display: block;
-}
-
-.home-button {
-  position: absolute;
-  right: 10%; /* Changed from 140px */
-  top: 60%;
-  transform: translateY(-50%);
-}
-
-.home-button img {
-  width: 70%; /* Keep this as a percentage */
-  height: auto;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.home-button:hover img {
-  transform: scale(1.1);
-}
-@media (max-width: 768px) {
-  .home-button {
-    right: 5%;
-    top: 70%;
-  }
+.card {
+  width: 100%; /* Full width of the container */
+  max-width: 1323.52px; /* Max width of each card */
+  margin: 0 auto; /* Center each card */
+  padding: 20px; /* Padding around each card */
+  margin-bottom: 150px; /* Space between cards */
+  height: auto; /* Set height to auto to accommodate image height */
+  border-radius: 8px; /* Rounded corners */
   
-  .home-button img {
-    width: 60%;
-  }
+
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(20px); /* Start slightly below for animation */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition for both opacity and position */
 }
 
-@media (max-width: 480px) {
-  .home-button {
-    right: 3%;
-    top: 80%;
-  }
-  
-  .home-button img {
-    width: 50%;
-  }
+/* Extra padding for the first card */
+.card:first-child {
+    padding-top: 18%; /* Adjust this value as needed for more space at the top */
+}
+
+.card.fade-in {
+  opacity: 1; /* Visible state after fade-in */
+  transform: translateY(0); /* Move to original position after fade-in */
+}
+
+.card-content {
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of the card */
+}
+
+.card-image {
+  opacity: 0; /* Start hidden for image animation */
+  transition: opacity 0.5s ease-in-out 0.5s; /* Fade in after card fades in */
+}
+
+.card-content.fade-in {
+  opacity: 1; /* Visible state for the image after fade-in */
 }
